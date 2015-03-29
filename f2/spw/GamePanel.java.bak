@@ -16,9 +16,9 @@ public class GamePanel extends JPanel {
 
 	 public GamePanel() {
 
-		bi = new BufferedImage(500, 600, BufferedImage.TYPE_INT_ARGB); //size BG #1
+		bi = new BufferedImage(500, 600, BufferedImage.TYPE_INT_ARGB);
 		big = (Graphics2D) bi.getGraphics();
-		big.setBackground(Color.WHITE); // color BG #1
+		big.setBackground(Color.WHITE); // BG  //#1
 		
 	}
 	
@@ -28,8 +28,8 @@ public class GamePanel extends JPanel {
 	public void updateGameUI(GameReporter reporter){
 		big.clearRect(0, 0, 500, 600);
 		
-		big.setColor(Color.BLUE);	//color score #1
-		big.drawString(String.format("%08d", reporter.getScore()), 400, 40); //size score #1
+		big.setColor(Color.BLUE);	//score //#1
+		big.drawString(String.format("%08d", reporter.getScore()), 400, 40); //#1
 		for(Sprite s : sprites){
 			s.draw(big);
 		}
